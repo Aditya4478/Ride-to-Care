@@ -1,0 +1,44 @@
+<main>
+    <style>
+        .vpcard{
+            width: 60%;
+            height: fit-content;
+            background: rgb(183, 95, 95);
+            justify-content: center;
+            text-align: center;
+        }
+        .inp-vp{
+            position: relative;
+            margin: 2% 10% 2% 10%;
+            width: 80%;
+            height: 40px;
+            justify-content: center;
+            text-align: center;
+        }
+        .subm{
+            justify-content: center;
+            text-align: center;
+            width: 40%;
+            margin: 0 30% 2% 30%;
+            height: 30px;
+            border-radius: 10px;
+            background-color: rgb(0, 221, 255);
+        }
+
+    </style>
+    <div class="body1">
+        <div class="vpcard">
+        <form action="rider-table.html" method="post" >
+            <h3 style="margin-top: 2%;">Quickly Register Patient Details :- </h3><hr style="height:4px;width:80%;margin: 2% 10% 2% 10%;border: 2px dashed #000; "><br>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; flex-direction: column;">
+                <input class="inp-vp pname" type="text" placeholder="Patient Name (eg.rohan) " pattern="^[a-zA-Z]{2,15}$" required  oninvalid="this.setCustomValidity('Enter 2-15 characters only')" oninput="setCustomValidity('')">
+                <input class="inp-vp pcd" type="text" placeholder="Enter Pincode" pattern="^\d{6}$" required  oninvalid="this.setCustomValidity('pincode should be 6 digit exactly')" oninput="setCustomValidity('')">
+                <input class="subm" type="submit">
+            </div>
+        </form>
+        </div>
+    </div>
+    <script>
+
+    </script>
+</main>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <title id="tabTitle">🚗Ride 2 Care.......</title>
+	 <link rel="icon" type="image/x-icon" href="../img/new8.png">
+	 <script>
+		 var tabTitle = document.getElementById("tabTitle");
+		 var originalText = "🚨 :( Come Back :( 🚨";
+		 var newText = "🚗Ride 2 Care.......";
+		 var isPageVisible = true;
+		 var index = 0;
+		 var animationIntervalId;
+
+		 // Function to update the tab title with animated text
+		 function updateTabTitle() {
+			 if (isPageVisible) {
+				 index = (index + 1) % newText.length;
+				 tabTitle.textContent = newText.substring(index) + newText.substring(0, index);
+			 }
+		 }
+
+		 // Function to handle page visibility change
+		 function handleVisibilityChange() {
+			 if (document.hidden) {
+				 // Page is not visible, stop the animation and update the tab title with original text
+				 isPageVisible = false;
+				 clearInterval(animationIntervalId);
+				 tabTitle.textContent = originalText;
+			 } else {
+				 // Page is visible again, start the animation and update the tab title with new text
+				 isPageVisible = true;
+				 animationIntervalId = setInterval(updateTabTitle, 200);
+			 }
+		 }
+
+		 // Listen for visibilitychange event
+		 document.addEventListener("visibilitychange", handleVisibilityChange);
+
+		 // Call the function to start the animation initially
+		 animationIntervalId = setInterval(updateTabTitle, 200);
+	 </script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="container" id="container">
+<div class="form-container sign-up-container">
+
+<form action="">
+	<h1>Create Account</h1>
+	<div class="social-container">
+		<a href="#" class="social"><i class="fa fa-facebook"></i></a>
+		<a href="#" class="social"><i class="fa fa-google"></i></a>
+		<a href="#" class="social"><i class="fa fa-linkedin"></i></a>
+	</div>
+	<span>or use your email for registration</span>
+	<input type="text" name="name" placeholder="Name (admin)" pattern="[a-z]*">
+	<input type="email" name="email" placeholder="Email (admin@email.com)" patter="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+	<input type="password" name="password" placeholder="Password (Admin123)" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,12}$">
+	<button>SignUp</button>
+</form>
+</div>
+<div class="form-container sign-in-container">
+	<form action="#">
+		<h1>Sign In</h1>
+		<div class="social-container">
+		<a href="#" class="social"><i class="fa fa-facebook"></i></a>
+		<a href="#" class="social"><i class="fa fa-google"></i></a>
+		<a href="#" class="social"><i class="fa fa-linkedin"></i></a>
+	</div>
+	<span>or use your account</span>
+	<input type="email" name="email" placeholder="Email" pattern="[a-z]*">
+	<input type="password" name="password" placeholder="Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,12}$">
+	<a href="#">Forgot Your Password</a>
+
+	<button>Sign In</button>
+	</form>
+</div>
+<div class="overlay-container">
+	<div class="overlay">
+		<div class="overlay-panel overlay-left">
+			<h1>Welcome Back!</h1>
+			<p>To keep connected with us please login with your personal info</p>
+			<button class="ghost" id="signIn">Sign In</button>
+		</div>
+		<div class="overlay-panel overlay-right">
+			<h1>Hello, Friend!</h1>
+			<p>Enter your details and start journey with us</p>
+			<button class="ghost" id="signUp">Sign Up</button>
+		</div>
+	</div>
+</div>
+</div>
+
+<script type="text/javascript">
+	const signUpButton = document.getElementById('signUp');
+	const signInButton = document.getElementById('signIn');
+	const container = document.getElementById('container');
+
+	signUpButton.addEventListener('click', () => {
+		container.classList.add("right-panel-active");
+	});
+	signInButton.addEventListener('click', () => {
+		container.classList.remove("right-panel-active");
+	});
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

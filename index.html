@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title id="tabTitle">🚗Ride 2 Care.......</title>
+  <link rel="icon" type="image/x-icon" href="./img/new8.png">
+	 <script>
+		 var tabTitle = document.getElementById("tabTitle");
+		 var originalText = "🚨 :( Come Back :( 🚨";
+		 var newText = "🚗Ride 2 Care.......";
+		 var isPageVisible = true;
+		 var index = 0;
+		 var animationIntervalId;
+
+		 // Function to update the tab title with animated text
+		 function updateTabTitle() {
+			 if (isPageVisible) {
+				 index = (index + 1) % newText.length;
+				 tabTitle.textContent = newText.substring(index) + newText.substring(0, index);
+			 }
+		 }
+
+		 // Function to handle page visibility change
+		 function handleVisibilityChange() {
+			 if (document.hidden) {
+				 // Page is not visible, stop the animation and update the tab title with original text
+				 isPageVisible = false;
+				 clearInterval(animationIntervalId);
+				 tabTitle.textContent = originalText;
+			 } else {
+				 // Page is visible again, start the animation and update the tab title with new text
+				 isPageVisible = true;
+				 animationIntervalId = setInterval(updateTabTitle, 200);
+			 }
+		 }
+
+		 // Listen for visibilitychange event
+		 document.addEventListener("visibilitychange", handleVisibilityChange);
+
+		 // Call the function to start the animation initially
+		 animationIntervalId = setInterval(updateTabTitle, 200);
+	 </script>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="css/team.css">
+  <link href="/theme/css/style.css" rel="stylesheet">
+  <link href="footer/style.css" rel="stylesheet">
+  <!--Favicon-->
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+  <style>
+.social-buttons {
+    display: inline-block;
+    background: transparent;
+    padding: 20px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px 10px;
+    /* Helper class to divide the icons */
+  }
+  .social-buttons .social-margin {
+    margin-right: 15px;
+  }
+  .social-buttons a,
+  .social-buttons a:hover,
+  .social-buttons a:focus,
+  .social-buttons a:active {
+    text-decoration: none;
+  }
+  .social-buttons .social-icon {
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    -moz-border-radius: 138px;
+    -webkit-border-radius: 138px;
+    border-radius: 138px;
+    border: 5px solid;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    line-height: 1px;
+    padding-top: 11px;
+    transition: all 0.5s;
+    /* Facebook Button Styling */
+    /* Twitter Button Styling */
+    /* Google+ Button Styling */
+    /* Linkedin Button Styling */
+    /* Pinterest Button Styling */
+    /* Behance Button Styling */
+    /* Github Button Styling */
+    /* Youtube Button Styling */
+    /* Soundcloud Button Styling */
+  }
+  .social-buttons .social-icon:hover {
+    transform: rotate(360deg) scale(1.3);
+  }
+
+  .social-buttons .social-icon.twitter {
+    font-size: 22px;
+    padding-top: 10px;
+    padding-left: 2px;
+    border-color: #55acee;
+    background-color: #55acee;
+    color: #ffffff;
+  }
+  .social-buttons .social-icon.twitter:hover {
+    background-color: #ffffff;
+    color: #55acee;
+  }
+
+  .social-buttons .social-icon.linkedin {
+    font-size: 24px;
+    padding-top: 8px;
+    padding-left: 1px;
+    background-color: #0976b4;
+    color: #ffffff;
+    border-color: #0976b4;
+  }
+  .social-buttons .social-icon.linkedin:hover {
+    background-color: #ffffff;
+    color: #0976b4;
+  }
+  .social-buttons .social-icon.instagram {
+    font-size: 22px;
+    padding-top: 9px;
+    background-color: #cb2027;
+    color: #ffffff;
+    border-color: #cb2027;
+  }
+  .social-buttons .social-icon.instagram:hover {
+    background-color: #ffffff;
+    color: #cb2027;
+  }
+
+  .social-buttons .social-icon.github {
+    font-size: 22px;
+    padding-top: 9px;
+    background-color: #4183c4;
+    color: #ffffff;
+    border-color: #4183c4;
+  }
+  .social-buttons .social-icon.github:hover {
+    background-color: #ffffff;
+    color: #4183c4;
+  }
+  #about {
+   padding:5em 0;
+   background: url(./img/bg-banner2.jpg) no-repeat fixed;
+   background-size: cover;
+   min-height: 650px;
+   position: relative;
+}
+  h3.w3_heade_tittle_agile,h2.w3_heade_tittle_agile  {
+    text-align: center;
+    font-weight: 700;
+    color: #111;
+    font-size: 3em;
+	    letter-spacing: 1px;
+
+}
+h3.w3_heade_tittle_agile.two {
+	  color: #fff;
+}
+p.sub_t_agileits {
+    font-size: 1em;
+    margin: 0;
+    color: #de0f17;
+    margin-bottom: 3em;
+    font-weight: 400;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+p.ab {
+    text-align: center;
+    line-height: 2em;
+    width: 98%;
+    margin-bottom: 3em;
+    color: #333;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+h5.w3l-subtitle {
+      margin-bottom: 0.7em;
+    font-weight: 700;
+       color: #207fdc;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+}
+.w3about-text p {
+    line-height: 2em;
+	    margin-bottom: 1.5em;
+}
+.tab-image img {
+    width: 100%;
+}
+/* Rectangle In */
+.hvr-rectangle-in {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  background:#207fdc;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-rectangle-in:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #de0f17;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-rectangle-in:hover, .hvr-rectangle-in:focus, .hvr-rectangle-in:active {
+  color: white;
+}
+.hvr-rectangle-in:hover:before, .hvr-rectangle-in:focus:before, .hvr-rectangle-in:active:before {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.read a {
+    padding: 0.7em 2em;
+    color: #fff;
+    letter-spacing: 1px;
+}
+@media(max-width:1440px){
+	#menu,.service-w3l,.portfolio,.contact-main-agile-info,.footer,#about {
+		padding:4em 0px;
+	}
+	.w3layouts-banner-top,.w3layouts-banner-top1,.w3layouts-banner-top2,.w3layouts-banner-top3{
+		min-height:660px;
+	}
+	h3.w3_heade_tittle_agile,h2.w3_heade_tittle_agile  {
+		font-size: 2.5em;
+	}
+	.w3_agileits_services_bottom_r_grid {
+		padding: 4em 4em 0;
+		min-height: 285px;
+	}
+	.w3_agile_services_bottom_right_grid, .w3_agile_services_bottom_right_grid1, .w3_agile_services_bottom_right_grid2 {
+		min-height: 570px;
+		padding: 5em;
+	}
+	.w3_service_bottom_grid_pos h3 {
+		font-size: 1.2em;
+		line-height: 2.5em;
+	}
+	.w3_service_bottom_grid_pos h3 {
+		font-size: 1.2em;
+		line-height: 2.3em;
+	}
+	.agileits-banner-info {
+		padding: 14em 0 0em;
+	}
+	.agileits-banner-info h3 {
+		font-size: 5.5em;
+		margin: 0.1em 0 0.2em 0;
+	}
+	.banner1 {
+		background: url(../images/banner.jpg) no-repeat 0px 0px;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		min-height: 346px;
+	}
+	.navbar-brand {
+		float: left;
+		height: 67px;
+		font-size: 0.8em;
+		line-height: 15px;
+		padding: 10px 10px!important;
+	}
+}
+@media(max-width:1366px){
+	.w3layouts-banner-top,.w3layouts-banner-top1,.w3layouts-banner-top2,.w3layouts-banner-top3{
+		min-height:650px;
+	}
+	.w3l_chill {
+		position: absolute;
+		top: -105px;
+		right: -35px;
+	}
+	.w3_agileits_services_bottom_r_grid p {
+		line-height: 2em;
+		margin: 1em 0 1em;
+	}
+	.w3_agileits_services_bottom_r_grid {
+		padding: 4em 3em 0;
+		min-height: 270px;
+	}
+	.agileits-banner-info {
+		padding:13em 0 0em;
+	}
+	.agileits-banner-info h3 {
+		font-size: 5em;
+		margin: 0.1em 0 0.2em 0;
+	}
+	.w3_agile_services_bottom_right_grid, .w3_agile_services_bottom_right_grid1, .w3_agile_services_bottom_right_grid2 {
+		min-height: 540px;
+		padding: 2.5em;
+	}
+	.w3_service_bottom_grid_pos h3 {
+		font-size: 1.2em;
+		line-height: 1.3em;
+	}
+}
+@media(max-width:1280px){
+	.w3layouts-banner-top,.w3layouts-banner-top1,.w3layouts-banner-top2,.w3layouts-banner-top3{
+		min-height:600px;
+	}
+
+	.w3_agileits_services_bottom_r_grid {
+		padding: 3em 2em 0;
+		min-height: 253px;
+	}
+	.w3_service_bottom_grid_pos h3 {
+		font-size: 1em;
+		line-height: 1em;
+	}
+	.w3_service_bottom_grid_pos {
+       padding: 2.7em;
+	}
+	p.sub_t_agileits {
+		font-size: 0.9em;
+		margin: 0;
+		margin-bottom: 2em;
+		letter-spacing: 8px;
+	}
+	.agileits-banner-info {
+		padding: 11em 0 0em;
+	}
+	.banner1 {
+		min-height: 315px;
+	}
+	.w3ls_banner_bottom_grid .social_agileinfo {
+		padding: 6em 2em 0em;
+	}
+	.w3_agile_services_bottom_right_grid, .w3_agile_services_bottom_right_grid1, .w3_agile_services_bottom_right_grid2 {
+		min-height: 506px;
+		padding: 2.5em;
+	}
+}
+@media(max-width:1080px){
+	.service-w3l h4.text-center {
+		font-size: 21px;
+		padding:20px 0 10px 0;
+	}
+	.w3_service_bottom_grid_pos h3 {
+		font-size: 1em;
+		line-height: 1em;
+	}
+	.w3_agileits_services_bottom_r_grid {
+		padding: 2em 1em 0;
+		min-height: 214px;
+	}
+	.w3_agile_services_bottom_right_grid, .w3_agile_services_bottom_right_grid1, .w3_agile_services_bottom_right_grid2 {
+		min-height: 429px;
+		padding: 3em;
+	}
+	.con-w3l-info p {
+      font-size: 0.8em;
+	}
+	.w3layouts-banner-top, .w3layouts-banner-top1, .w3layouts-banner-top2, .w3layouts-banner-top3 {
+		min-height: 530px;
+	}
+	.agileits-banner-info h3 {
+		font-size: 4em;
+		margin: 0.1em 0 0.2em 0;
+	}
+	.m_nav_item {
+		display: inline-block;
+		margin: 0 0.5em;
+	}
+	.agileits-banner-info {
+		padding: 8em 0 0em;
+	}
+	.w3ls_banner_bottom_grid h4 {
+		font-size: 1em;
+		padding: 10px 0;
+		width: 55%;
+		margin: -26px auto 2px;
+	}
+	#menu, .service-w3l, .portfolio, .contact-main-agile-info, .footer, #about {
+		padding: 3em 0px;
+	}
+	#stats {
+		padding: 1em 0;
+	}
+	.w3_agileits_services_bottom_r_grid h4 {
+		font-size: 1.3em;
+	}
+	.w3_service_bottom_grid_pos {
+		padding: 1.6em;
+	}
+	h3.w3_heade_tittle_agile,h2.w3_heade_tittle_agile  {
+		font-size: 2.3em;
+	}
+	h5.w3l-subtitle {
+		margin-bottom: 0.7em;
+		font-size: 1.6em;
+	}
+	.contact-form-aits input[type="text"], .contact-form-aits input[type="email"], .contact-form-aits textarea {
+      width: 48.95%;
+	}
+	.w3layouts_head_slide {
+    font-size: 1.5em;
+	}
+}
+@media(max-width:1050px){
+	.w3_agile_services_bottom_right_grid, .w3_agile_services_bottom_right_grid1, .w3_agile_services_bottom_right_grid2 {
+		min-height: 416px;
+		padding: 3em;
+	}
+	.w3_agileits_services_bottom_r_grid p {
+		line-height: 1.9em;
+		margin: 0.5em 0 0em;
+	}
+	.w3_agileits_services_bottom_r_grid {
+		padding: 2em 1em 0;
+		min-height: 208px;
+	}
+	.w3_service_bottom_grid_pos {
+		bottom: 35px;
+		left: 35px;
+		opacity: 0;
+		right: 35px;
+		top: 35px;
+	    padding: 3.5em 2.7em;
+	}
+	.agileits-banner-info p {
+		font-size: 0.9em;
+		line-height: 2.2em;
+		width: 51%;
+		text-align: left;
+	}
+
+	.agileits-banner-info h3 {
+		font-size:3.5em;
+		margin: 0.1em 0 0.2em 0;
+	}
+	.header-bottom {
+		padding: 0.5em 2em;
+	}
+	.agileits-banner-info {
+		padding: 9em 0 0em;
+	}
+	.w3about-text p {
+		line-height: 2em;
+		margin-bottom: 1em;
+	}
+	.banner1 {
+		min-height: 261px;
+	}
+	.contact-form-aits textarea {
+		width: 100%;
+		height: 150px;
+	}
+	.map_agile iframe {
+		height: 319px;
+		width: 100%;
+		border: none;
+	}
+}
+@media(max-width:1024px){
+	.w3_agileits_services_bottom_r_grid {
+		padding: 1em 1em 0;
+		min-height: 199px;
+	}
+	.w3layouts-banner-top, .w3layouts-banner-top1, .w3layouts-banner-top2, .w3layouts-banner-top3 {
+		min-height:500px;
+	}
+	.w3l_chill {
+		position: absolute;
+		top: -105px;
+		right: 21px;
+	}
+	.w3_agileits_services_bottom_r_grid h4 {
+		font-size: 1.1em;
+		padding-bottom: 1em;
+	}
+	.w3_agile_services_bottom_right_grid, .w3_agile_services_bottom_right_grid1, .w3_agile_services_bottom_right_grid2 {
+		min-height: 398px;
+		padding: 3em;
+	}
+
+}
+@media(max-width:991px){
+
+   .serv-agileinfo3 {
+		float: left;
+		width: 100%;
+	}
+	.serv-agileinfo2 {
+        padding-top:0;
+		width: 100%;
+		float: left;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.w3_agileits_services_bottom_l_grid {
+		width: 50%;
+		float: left;
+	}
+	.w3_agileits_services_bottom_r_grid {
+		padding: 1em 1em 0;
+		min-height: 199px;
+		float: right;
+		width:48%;
+	}
+	.w3_agileits_services_bottom_r_grid {
+		padding: 4em 3em 0;
+	    min-height: 335px;
+		float: right;
+		width: 50%;
+	}
+	.w3_agileits_services_bottom_r_grid p {
+		line-height: 1.9em;
+		margin: 1.5em 0 0em;
+	}
+	.w3_service_bottom_grid_pos {
+		bottom: 35px;
+		left: 35px;
+		opacity: 0;
+		right: 35px;
+		top: 35px;
+		padding: 7.5em 2.7em;
+		text-align: center;
+	}
+	.serv-wthree4 {
+        width: 50%;
+		margin: 0 auto;
+		float: none;
+	}
+	.serv-agileinfo2 {
+		padding-top:10px!important;
+	}
+	.navbar-nav > li > a {
+		font-size: 14px;
+		padding: 17px 13px 0;
+	}
+	.more a {
+	  padding: 10px 20px;
+	}
+	.w3layouts_stats_left {
+		padding: 5em 0 4em 0;
+		text-align: center;
+		width: 50%;
+		float: left;
+	}
+	.contact-grid {
+		padding: 2em 2em;
+		float: left;
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 5px;
+	}
+	p.ab {
+		text-align: center;
+		line-height: 2em;
+		margin-bottom:2em;
+		font-size: 1em;
+		font-weight:600;
+	}
+	.map-grids {
+       padding: 2em 2em;
+	}
+	.contact-top-agileits {
+		margin-bottom: 2em;
+	}
+	.w3_agile_copy_right {
+		text-align: center;
+		margin-top: 13px;
+	}
+	.agileits_w3layouts_copy_right {
+		padding: 0;
+		text-align: center;
+	}
+	.w3agile_footer_grid {
+		padding: 0;
+	}
+	.w3agile_footer_grid:nth-child(2) {
+		margin: 1.5em 0;
+	}
+	.wthree_team_grid1_pos h4 {
+		font-size: 0.9em;
+		padding: .8em;
+	}
+	.logo p {
+		letter-spacing: 3px;
+		font-size: 10px;
+	}
+	.w3agile_footer_grid h3 {
+		font-size: 1.3em;
+		margin: 0 0 1em;
+	}
+	.gallery-top {
+		padding: 0;
+		float: left;
+		width: 50%;
+	}
+	.agileits-banner-info {
+		padding: 11em 0 0 0em;
+	}
+	.agileits-banner-info p {
+		font-size: 0.9em;
+		line-height: 2.2em;
+		width: 65%;
+		text-align: left;
+	}
+	.w3about-img {
+		width: 100%;
+		padding: 0;
+	}
+	.w3about-text {
+		margin-top: 2em;
+	}
+	.w3ls_banner_bottom_grid {
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+		padding: 0;
+		float: left;
+		width: 50%;
+	}
+	.w3ls_banner_bottom_grid h4 {
+		font-size: 1em;
+		padding: 10px 0;
+		width: 50%;
+		margin: 40px auto 2px;
+	}
+	.contact-form-aits input[type="text"], .contact-form-aits input[type="email"], .contact-form-aits textarea {
+		width: 100%;
+	}
+	.m_nav_item a {
+		font-size: 0.7em;
+	}
+	.w3-agile-blog-right {
+		margin-top: 40px;
+		width: 75%;
+	}
+}
+@media(max-width:800px){
+	.w3layouts-banner-top, .w3layouts-banner-top1, .w3layouts-banner-top2, .w3layouts-banner-top3 {
+		min-height:450px;
+	}
+	.w3_agileits_services_bottom_r_grid {
+		padding: 4em 3em 0;
+		min-height: 271px;
+		float: right;
+		width: 50%;
+	}
+	.w3_service_bottom_grid_pos {
+		bottom: 35px;
+		left: 35px;
+		opacity: 0;
+		right: 35px;
+		top: 35px;
+		padding: 5.5em 2.7em;
+		text-align: center;
+	}
+	h3.w3_heade_tittle_agile,h2.w3_heade_tittle_agile  {
+		font-size: 2.4em;
+	}
+	p.sub_t_agileits {
+		font-size: 0.9em;
+		margin: 0;
+		margin-bottom: 2em;
+		font-weight: 400;
+		letter-spacing: 7px;
+	}
+	.w3l_chill img {
+		width: 58%;
+	}
+	.book-form.agileits-login {
+		display:block!important;
+	}
+	.tabs nav {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	.agileits-banner-info {
+		padding: 11em 0 0 2em;
+	}
+	.menu__link {
+		display: block;
+		padding: 0.5em 0em;
+	}
+	.m_nav_item a {
+		font-size: 0.75em;
+	}
+	.navbar-brand {
+		float: left;
+		height: 67px;
+		font-size: 0.7em;
+		line-height: 15px;
+		padding: 13px 10px!important;
+	}
+	.agileits-banner-info {
+		padding: 7em 0 0 2em;
+	}
+	.agileits-banner-info span {
+		padding: 0.5em 2em;
+		color: #fff;
+		font-size: 1em;
+		padding: 5px 1.8em;
+		letter-spacing:1px;
+	}
+	.w3ls_banner_bottom_grid h4 {
+		font-size: 1em;
+		padding: 10px 0;
+		width: 50%;
+		margin: 29px auto 2px;
+	}
+	.banner1 {
+		min-height: 213px;
+	}
+	.agileits-banner-info h3 {
+		font-size: 3em;
+		margin: 0.1em 0 0.2em 0;
+	}
+	.w3layouts_stats_left {
+		padding: 2em 0 2em 0;
+		text-align: center;
+		width: 50%;
+		float: left;
+	}
+	.tab-info {
+		padding: 0;
+		margin:1em 0;
+		 float: none;
+		 width:100%;
+	}
+	.tab-image {
+		padding: 0;
+		 float: none;
+		  width:100%;
+	}
+}
+@media(max-width:768px){
+	h3.w3_heade_tittle_agile,h2.w3_heade_tittle_agile  {
+		font-size: 2em;
+	}
+	.navbar-brand {
+		font-size: 0.6em;
+		line-height: 25px;
+		letter-spacing: 1px;
+	}
+	.w3_agileits_services_bottom_r_grid {
+		padding: 3em 2em 0;
+		min-height: 255px;
+		float: right;
+		width: 50%;
+	}
+	.m_nav_item {
+		display: inline-block;
+		margin: 0 0.4em;
+	}
+}
+@media(max-width:767px){
+	.navbar-nav {
+		text-align: center;
+		margin: 0;
+		float: none;
+	}
+	.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	    background: #de0f17;
+	}
+	.navbar-default .navbar-toggle .icon-bar {
+		background-color: #fff;
+	}
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		border: none;
+	}
+	.navbar-default .navbar-toggle {
+		border: none;
+		background: #0c0c0c;
+		border-radius: 0;
+	}
+	.navbar-toggle {
+		position: relative;
+		float: right;
+		padding: 13px 10px;
+		margin-top: 15px;
+		margin-right: 0;
+		margin-bottom: 0;
+	}
+	.w3about-img {
+		float: left;
+	}
+	.serv-wthree4 {
+		width: 100%;
+		margin: 1.5em auto 0;
+		float: none;
+	}
+	.w3_agileits_services_bottom_r_grid {
+		padding: 3em 2em 0;
+		min-height: 260px;
+		float: right;
+		width: 50%;
+	}
+	#m_nav_list {
+		list-style: none;
+		margin: 1.1em 0 0;
+		float: none;
+		text-align: center;
+	}
+	.m_nav_item {
+		display: block;
+		margin: 0.5em 0em;
+	}
+	.m_nav_item a {
+		font-size:0.8em;
+	}
+	.w3ls_banner_bottom_grid h4 {
+		font-size: 1em;
+		padding: 10px 0;
+		width: 50%;
+		margin: 18px auto 2px;
+	}
+	.banner1 {
+		min-height: 187px;
+	}
+	h5.w3l-subtitle {
+		margin-bottom: 0.7em;
+		font-size: 1.4em;
+	}
+	.w3_agileits_header_text {
+		float: none;
+		text-align: center;
+		margin-bottom: 7px;
+	}
+	.agileinfo_social_icons {
+		float: none;
+		text-align: center;
+	}
+	.agileinfo_social_icons li {
+		display: inline-block;
+		margin-right: 5px;
+	}
+	ul.dropdown-menu.agile_short_dropdown {
+		margin: 0 auto!important;
+		text-align: center;
+		width: 100%;
+	}
+	.agile_short_dropdown {
+		border-radius: 0;
+		background: #edeeef;
+	}
+	ul.dropdown-menu.agile_short_dropdown {
+		top: 78%;
+	}
+
+}
+@media(max-width:736px){
+
+	.w3_agileits_services_bottom_r_grid {
+		padding: 3em 2em 0;
+		min-height: 250px;
+		float: right;
+		width: 50%;
+	}
+	 .agileits-banner-info h3 {
+		font-size:2.5em;
+		margin: 0.1em 0 0.2em 0;
+	}
+	.agileits-banner-info p {
+		line-height: 2em;
+		 width: 86%;
+		text-align: left;
+	}
+	.agileits-banner-info {
+		padding: 8em 0 0 3em;
+	}
+	.w3-agile-blog-right {
+		width: 90%;
+	}
+}
+.container5 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+
+}
+.container5 .preloader5 {
+  animation: rotate 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+@keyframes rotate {
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+.preloader5 span {
+  position: absolute;
+  display: block;
+  height: 64px;
+  width: 64px;
+  background: #f23f3f;
+  border: 1px solid #f23f3f;
+  border-radius: 100%;
+}
+.preloader5 span:nth-child(1) {
+  transform: translate(-28px, -28px);
+  animation: shape_1 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+@keyframes shape_1 {
+  60% {
+    transform: scale(0.4);
+  }
+}
+.preloader5 span:nth-child(2) {
+  transform: translate(28px, -28px);
+  animation: shape_2 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+@keyframes shape_2 {
+  40% {
+    transform: scale(0.4);
+  }
+}
+.preloader5 span:nth-child(3) {
+  position: relative;
+  border-radius: 0px;
+  transform: scale(0.98) rotate(-45deg);
+  animation: shape_3 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+@keyframes shape_3 {
+  50% {
+    border-radius: 100%;
+    transform: scale(0.5) rotate(-45deg);
+  }
+  100% {
+    transform: scale(0.98) rotate(-45deg);
+  }
+}
+.shadow1 {
+  position: relative;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  height: 16px;
+  width: 64px;
+  border-radius: 50%;
+  background-color: #696969;
+  border: 1px solid #cccccc;
+  animation: shadow 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+  z-index: 100;
+}
+@keyframes shadow {
+  50% {
+    transform: translateX(-50%) scale(0.5);
+    border-color: #f2f2f2;
+  }
+}
+ </style>
+ </head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<div class="container5" id="container5">
+	<div class="preloader5">
+		<span></span><span></span><span></span>
+	</div>
+	<div class="shadow1"></div>
+</div>
+<script>
+var loader = document.getElementById('container5');
+
+window.addEventListener("load", function() {
+  // Show the preloader initially
+  loader.style.display = "block";
+
+
+  // After 5 seconds, hide the preloader
+  delayExecution(() => {
+	  loader.style.display = "none";
+	  loader.style.zIndex = "0";
+  });
+});
+
+function delayExecution(callback) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      callback();
+      resolve();
+    }, 2000); // 5 seconds in milliseconds
+  });
+}
+
+</script>
+
+  <!--banner-->
+  <section id="banner" class="banner">
+    <div class="bg-color">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+			  </button>
+              <div class="brand">
+              <img src="img/new5.png" class="img-responsive" style="width: 120px;"></a>
+            </div>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+              <ul class="nav navbar-nav">
+				<li class="active" style="margin-top: 1.5rem;"><a href="./lgsp/signlog.html">Get Started</a></li>
+                <li class="" style="margin-top: 1.5rem;"><a href="#service">Services</a></li>
+                <li class="" style="margin-top: 1.5rem;"><a href="#about">About</a></li>
+                <li class="" style="margin-top: 1.5rem;"><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row">
+          <div class="banner-info">
+            <div class="banner-logo text-center">
+              <img src="logo.png" class="img-responsive" style="width: 140px;">
+            </div>
+            <div class="banner-text text-center">
+              <h1 class="white">Healthcare at your call!!</h1>
+              <p style="color:#ffc0c0">This website is specially designed to help different peoples to get instant<br>ride for visiting the nearest hospital in emergency</p>
+              <div >
+                <br>
+                <a href="#cta-2"><img src="./img/drop-down-arrow.png"></a>
+              </div>
+            </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ banner-->
+  <!--service-->
+  <section id="service" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-4">
+          <h2 class="ser-title" >How we help you?</h2>
+          <hr class="botm-line">
+          <p>User can register in our site. Later on :<br>
+			1. User can find ambulance in emergency<br>
+			2. Any rider can earn perks by helping patients<br><br>
+			To attract more riders we are providing future approaches of project. Where riders can earn more perks by following traffic rules. Currently we have only focused for Registration process & developing a workable prototype with easy to use UI.
+			<hr style="position: relative;
+			top: 20px;
+			border: none;
+			height: 2px;
+			background: black;
+			margin-bottom: 50px;">
+			Users get following qualities : <br>
+			1. Easy Booking <br>
+			2. Easy Availability <br>
+			3. Experienced Riders
+		  </p>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="service-info">
+            <div class="icon">
+              <i class="fa fa-stethoscope"></i>
+            </div>
+            <div class="icon-info">
+              <h4>24 Hour Support</h4>
+              <p>If you have a health concern and can’t reach a doctor right away, or you’re not sure where else to call, you can call our Medical Help Line 24 hours a day, 7 days a week. Once enrolled, this member benefit allows you to speak with an experienced registered nurse to get answers to your questions and find out what steps you need to take. If you are currently a member of Independent Health, you can find the phone number of the 24-Hour Medical Help Line on the back of your Member ID card.<br /><br /> </p>
+            </div>
+          </div>
+          <div class="service-info">
+            <div class="icon">
+              <i class="fa fa-ambulance"></i>
+            </div>
+            <div class="icon-info">
+              <h4>Emergency Services</h4>
+              <p>Ambulance services in NSW are provided free of charge to concession card holders, including pensioners. NSW Ambulance also has a policy in place for patients who are under financial hardship and unable to pay for our services.24 hours patient transport vehicle available. Patients are transported from home (on campus) to IIT hospital and patients referred by emergency duty doctor to empanelled hospital for specialized care. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="service-info">
+            <div class="icon">
+              <i class="fa fa-user-md"></i>
+            </div>
+            <div class="icon-info">
+              <h4>Medical Counseling</h4>
+              <p>Process of providing information, advice, and assistance to patients to improve their health, treatment adherence, and quality of life
+              Focuses on open communication between the patient and the provider, shared  decision-making, and a shared goal of alleviating discomfort for the patient.
+              Takes into account patients’ individual preferences, concerns, and emotions
+              <br /><br /><br /><br />
+              </p>
+            </div>
+          </div>
+          <div class="service-info">
+            <div class="icon">
+              <i class="fa fa-medkit"></i>
+            </div>
+            <div class="icon-info">
+              <h4>OPD</h4>
+              <p>Patients are registered at the reception and are seen on first come, first serve basis, however out of turn consultation may be provided in case of emergency and senior citizen. Patients have the right to consult any doctor. In OPD, clinical consultation is provided to patients which includes history taking, clinical examination, diagnosis and providing prescription to patients besides advising laboratory tests in some cases.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ service-->
+  <!--about section-->
+<section id="about" class="feature-section section bg-gray" style="color: white; min-height: auto;">
+	<div class="container bg-color" style="min-height: auto;">
+		<div class="row" >
+			<div class="col-lg-12" >
+				<div class="image-content" >
+					<div class="section-title text-center" >
+						<h3 style="color: #fff700;">Specialized  <span style="color:#fffb84">for . . .</span></h3>
+						<hr class="botm-line" style="margin: 0px 0 20px 48%">
+						<p class="mb-0" style="color: orange">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam magni in at debitis <br> nam error officia vero tempora alias? Sunt?</p>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="item">
+								<div class="icon-box">
+									<figure>
+										<a href="services.html"><img loading="lazy" src="images/resource/1.png" alt="features image"></a>
+									</figure>
+								</div>
+								<h3 class="mb-2" style="color: #00ff2f;">Orthopedics</h3>
+								<p style="color: wheat">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus veniam illo quibusdam pariatur
+									ex sunt, est aspernatur
+									at debitis eius vitae vel nostrum dolorem labore autem corrupti odit mollitia?</p>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="item">
+								<div class="icon-box">
+									<figure>
+										<a href="services.html">
+											<img loading="lazy" src="images/resource/2.png" alt="features image">
+										</a>
+									</figure>
+								</div>
+								<h3 class="mb-2" style="color: #00ff2f;">Diaginostic</h3>
+								<p style="color: wheat">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus veniam illo quibusdam pariatur
+									ex sunt, est aspernatur
+									at debitis eius vitae vel nostrum dolorem labore autem corrupti odit mollitia?</p>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="item">
+								<div class="icon-box">
+									<figure>
+										<a href="services.html">
+											<img loading="lazy" src="images/resource/3.png" alt="features image">
+										</a>
+									</figure>
+								</div>
+								<h3 class="mb-2" style="color: #00ff2f;">Psycology</h3>
+								<p style="color: wheat">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus veniam illo quibusdam pariatur
+									ex sunt, est aspernatur
+									at debitis eius vitae vel nostrum dolorem labore autem corrupti odit mollitia?</p>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="item">
+								<div class="icon-box">
+									<figure>
+										<a href="services.html">
+											<img loading="lazy" src="images/resource/4.png" alt="features image">
+										</a>
+									</figure>
+								</div>
+								<h3 class="mb-2" style="color: #00ff2f;">General Treatment</h3>
+								<p style="color: wheat">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus veniam illo quibusdam pariatur
+									ex sunt, est aspernatur
+									at debitis eius vitae vel nostrum dolorem labore autem corrupti odit mollitia?</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--End about section-->
+  <section id="cta-2" class="section-padding">
+    <div class="container">
+        <h3 class="w3_heade_tittle_agile" style="color: white;">« Developer Team »</h3>
+            <p class="sub_t_agileits">Meet Our Amazing Team...</p>
+              <div class="w3layouts-grids">
+                  <div class="col-md-3 wthree_team_grid">
+                  <div class="wthree_team_grid1">
+                    <div class="hover14 column">
+                      <div>
+                        <figure><img src="img/t1.jpg" alt=" " class="img-responsive" /></figure>
+                      </div>
+                    </div>
+                    <div class="wthree_team_grid1_pos">
+                      <h4>Rabecca Scot</h4>
+                    </div>
+                  </div>
+                  <div class="wthree_team_grid2">
+                    <ul class="social-icons">
+                       <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-3 wthree_team_grid">
+                  <div class="wthree_team_grid1">
+                    <div class="hover14 column">
+                      <div>
+                        <figure><img src="img/t3.jpg" alt=" " class="img-responsive" /></figure>
+                      </div>
+                    </div>
+                    <div class="wthree_team_grid1_pos">
+                      <h4>Rosy Carl </h4>
+                    </div>
+                  </div>
+                  <div class="wthree_team_grid2">
+                    <ul class="social-icons">
+                       <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-3 wthree_team_grid">
+                  <div class="wthree_team_grid1">
+                    <div class="hover14 column">
+                      <div>
+                        <figure><img src="img/t2.jpg" alt=" " class="img-responsive" /></figure>
+                      </div>
+                    </div>
+                    <div class="wthree_team_grid1_pos">
+                      <h4>David Martin</h4>
+                    </div>
+                  </div>
+                  <div class="wthree_team_grid2">
+                    <ul class="social-icons">
+                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-3 wthree_team_grid">
+                  <div class="wthree_team_grid1">
+                    <div class="hover14 column">
+                      <div>
+                        <figure><img src="img/t4.jpg" alt=" " class="img-responsive" /></figure>
+                      </div>
+                    </div>
+                    <div class="wthree_team_grid1_pos">
+                      <h4>Reena Scot</h4>
+                    </div>
+                  </div>
+                  <div class="wthree_team_grid2">
+                    <ul class="social-icons">
+                       <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="clearfix"> </div>
+              </div>
+
+    </div>
+  </section>
+  <!--contact-->
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+          <h2 class="ser-title" style="align-content: center;">Contact us</h2>
+          <hr class="botm-line" style="margin: 20px 0 20px 48%">
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <h3>Contact Info</h3>
+          <div class="space"></div>
+          <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>Sarigam,Gujarat<br> India, 396001</p>
+          <div class="space"></div>
+          <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>info@mavericks.com</p>
+          <div class="space"></div>
+          <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+91 83208 01488</p>
+        </div>
+        <div class="col-md-8 col-sm-8 marb20" style="margin-top: 5px;">
+          <div class="contact-info">
+            <h3 class="cnt-ttl" style="letter-spacing: 10px;">Get in touch.....</h3>
+            <div class="space"></div>
+            <div id="sendmessage">Your message has been sent. Thank you!</div>
+            <div id="errormessage"></div>
+            <form action="" method="post" role="form" class="contactForm">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control br-radius-zero" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control br-radius-zero" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control br-radius-zero" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control br-radius-zero" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validation"></div>
+              </div>
+
+              <div class="form-action">
+                <button type="submit" class="btn btn-form">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ contact-->
+  <!--footer-->
+<!-- footer -->
+<div class="footer">
+	<div class="container">
+
+		<div class="agile_footer_copy">
+			<div class="w3agile_footer_grids">
+				<div class="col-md-4 w3agile_footer_grid">
+					<h3>About Us</h3>
+					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse.<span>Excepteur sint occaecat cupidatat
+						non proident, sunt in culpa qui officia deserunt mollit.</span></p>
+				</div>
+				<div class="col-md-4 w3agile_footer_grid">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387142.84010033106!2d-74.25819252532891!3d40.70583163828471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1475140387172" style="border:0"></iframe>
+				</div>
+				<div class="col-md-4 w3agile_footer_grid w3agile_footer_grid1">
+					<h3>Navigation</h3>
+					<ul>
+						<li><span class="fa fa-long-arrow-right" aria-hidden="true"></span><a href="#banner">Home</a></li>
+						<li><span class="fa fa-long-arrow-right" aria-hidden="true"></span><a href="#service">Services</a></li>
+						<li><span class="fa fa-long-arrow-right" aria-hidden="true"></span><a href="#about">About</a></li>
+						<li><span class="fa fa-long-arrow-right" aria-hidden="true"></span><a href="#contact">Contact Us</a></li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="w3_agileits_copy_right_social">
+			<div class="col-md-6 agileits_w3layouts_copy_right">
+				<p>&copy;2023 All rights reserved by Team Mavericks</p>
+			</div>
+			<div class="col-md-6 w3_agile_copy_right">
+				<ul class="agileits_social_list">
+							<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+							<li><a href="#" class="w3_agile_rss"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+						</ul>
+			</div>
+
+		</div>
+	</div>
+</div>
+<!-- //footer -->
+  <!--/ footer-->
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="contactform/contactform.js"></script>
+
+</body>
+
+</html>
